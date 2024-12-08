@@ -3,24 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #0078D7;
-        }
-        p {
-            font-size: 18px;
-        }
-    </style>
+    <title>Multilingual Text Segmentation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Project</h1>
-    <p>This is a demo project to showcase how to set up GitHub Pages.</p>
-    <p>Visit my <a href="https://github.com/your-username" target="_blank">GitHub Profile</a>.</p>
+    <header>
+        <h1>Multilingual Text Segmentation</h1>
+    </header>
+    <nav>
+        <a href="#abstract">Abstract</a>
+        <a href="#introduction">Introduction</a>
+        <a href="#dataset">Dataset</a>
+        <a href="#related-work">Related Work</a>
+        <a href="#subtitle-segmentation">Subtitle Segmentation</a>
+    </nav>
+    <main>
+        <section id="abstract">
+            <h2>Abstract</h2>
+            <p>Accurate text segmentation is essential for text-related generative tasks, including text inpainting, editing, and style transfer. However, current methods often fall short in addressing the complexities of multilingual subtitles, hindered by the lack of a customizable and diverse dataset as well as an efficient pipeline for handling subtitle-specific challenges. In this work, we present ADET80k, a customizable synthetic dataset built upon ADE20k, featuring multilingual subtitle text in four languages—English, Chinese, Spanish, and Korean—with diverse typographical effects. To address subtitle segmentation, we propose a two-stage framework: DeepLabv3+ generates coarse masks, which are subsequently refined using "High Quality Segmentation for Ultra High-resolution Images," achieving precise, high-resolution outputs. Extensive experiments demonstrate the robustness of our framework in multilingual contexts, with applications in subtitle-specific text inpainting and editing tasks. The dataset, pipeline, and code are publicly available at <a href="https://github.com/BillRenCN/Video-inpaiting.git" target="_blank">GitHub</a>.</p>
+        </section>
+
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Text segmentation is the process of isolating text strokes from complex backgrounds in an image, classifying each pixel as part of the text foreground or the background. This task is a cornerstone for numerous applications, including generating high-quality text images, transferring text styles, and removing text from visual scenes. Precise segmentation enables these tasks to deliver practical and visually coherent results. Among these applications, subtitle inpainting in videos presents unique challenges due to the complexity and variability of subtitles...</p>
+        </section>
+
+        <section id="dataset">
+            <h2>Dataset</h2>
+            <h3>ADET80k Overview</h3>
+            <p>To address the lack of multilingual and customizable datasets for subtitle segmentation, we introduce ADET80k, a large-scale dataset designed for training and evaluating subtitle segmentation models...</p>
+            <h3>Corpus and Sampling</h3>
+            <p>The corpus for the subtitles consists of frequently used words and phrases in the respective languages. For English and Korean, subtitles are sampled as word sequences...</p>
+            <h3>Subtitle Effects and Annotation</h3>
+            <ul>
+                <li><strong>Plain White Text:</strong> Simple white text directly overlaid on the image.</li>
+                <li><strong>Text with Transparent Box:</strong> Subtitles are displayed over a semi-transparent black box for enhanced readability.</li>
+                <li><strong>Shadowed Text:</strong> Subtitles include a shadow effect, creating a 3D-like appearance.</li>
+                <li><strong>None:</strong> A baseline effect where the text is directly added to the image without additional styling.</li>
+            </ul>
+            <h3>Dataset Composition</h3>
+            <p>The ADET80k dataset contains 80,000 samples, with each image in the ADE20k dataset processed to generate four variations...</p>
+        </section>
+
+        <section id="related-work">
+            <h2>Related Work</h2>
+            <h3>Text Segmentation Methods</h3>
+            <p>Traditional text segmentation methods relied on thresholding techniques...</p>
+            <h3>Text Segmentation Datasets</h3>
+            <p>Robust datasets are pivotal for advancing text segmentation...</p>
+            <h3>Multilingual Text Segmentation</h3>
+            <p>Handling multilingual text segmentation involves challenges stemming from diverse scripts and structures across languages...</p>
+        </section>
+
+        <section id="subtitle-segmentation">
+            <h2>Subtitle Segmentation</h2>
+            <h3>Pipeline Overview</h3>
+            <p>The segmentation pipeline consists of two main stages:</p>
+            <ol>
+                <li><strong>Coarse Mask Generation:</strong> Given an input image...</li>
+                <li><strong>Mask Refinement:</strong> The coarse mask is further refined...</li>
+            </ol>
+            <h3>Evaluation on YouTube Subtitles</h3>
+            <p>To evaluate the effectiveness of our pipeline, we tested it on subtitles extracted from YouTube videos...</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Multilingual Text Segmentation Blog</p>
+    </footer>
 </body>
 </html>
